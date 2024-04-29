@@ -6,8 +6,8 @@
 #include <Windows.h>
 #include <windowsx.h>
 
-#include <winring0.h>
-#include <getopt.h>
+#include "..\common\include\getopt.h"
+#include "..\common\include\winring0.h"
 
 #define BIT(nr)				(1 << (nr))
 
@@ -131,6 +131,7 @@ void sigint_handle(int sig)
 
 int main(int argc, char *argv[])
 {
+	//FreeConsole();
 	if (parse_opts(argc, argv)) {
 		print_help();
 		return 0;

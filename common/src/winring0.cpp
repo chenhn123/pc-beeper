@@ -2,7 +2,7 @@
 
 #include <Windows.h>
 
-#include <winring0.h>
+#include "..\include\winring0.h"
 
 #define lpWinRing0LoaderTitle L"WinRing0 Loader"
 
@@ -12,6 +12,9 @@ int WinRing0_init(void)
 {
 	if (!InitializeOls()) {
 		fprintf_s(stderr, "%s(): failed to load WinRing0 dll and driver\n", __func__);
+		DWORD error = ::GetLastError();
+		printf_s("%d \n", error);
+
 		return -EFAULT;
 	}
 
