@@ -28,9 +28,9 @@ How it works:
 
 
 
-Build: Microsoft Visual Studio 2017 Community
+Build: Microsoft Visual Studio 2019 Community
 
-Run: Microsoft Visual C++ 2015/2017 Runtime is required
+Run: Microsoft Visual C++ 2019 Runtime is required
 
 Usages:
 
